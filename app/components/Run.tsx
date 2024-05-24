@@ -149,12 +149,7 @@ function Run() {
         const { symbol, logoURL, success, errorMessage } = JSON.parse(
           toolCall.function.arguments
         );
-        if (!success || errorMessage) {
-          toast.error(
-            errorMessage ?? "Something went wrong fetching data for stocks",
-            { position: "bottom-center" }
-          );
-        }
+        
         if (!symbol) {
           toast.error("No symbol found", { position: "bottom-center" });
         }
@@ -223,19 +218,19 @@ function Run() {
 
   return (
     <div className="flex flex-col mb-8">
-      <h1 className="text-4xl font-semibold mb-4">Run</h1>
+      <h1 className="text-4xl font-semibold mb-4"></h1>
       <div className="flex flex-row gap-x-4 w-full">
         <Button
           onClick={handleCreate}
           disabled={creating || !assistant || !thread}
         >
-          {creating ? "Creating..." : "Create"}
+          {creating ? "Creating..." : "Create Run"}
         </Button>
         <Button
           onClick={handleSubmitAction}
           disabled={runState !== "requires_action"}
         >
-          Submit Action
+           Action
         </Button>
       </div>
     </div>

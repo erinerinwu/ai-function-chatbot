@@ -84,7 +84,7 @@ function ChatContainer() {
   };
 
   return (
-    <div className="flex flex-col w-full h-full max-h-screen rounded-lg border-blue-200 border-solid border-2 p-10">
+    <div >
       {/* Messages */}
       <div className="flex flex-col h-full max-h-[calc(100vh-400px)] overflow-y-auto border-blue-200 border-solid border-2 p-6 rounded-lg">
         {fetching && <div className="m-auto font-bold">Fetching messages.</div>}
@@ -111,7 +111,7 @@ function ChatContainer() {
       <div className="flex flex-row w-full mt-5">
         <input
           type="text"
-          className="flex-grow rounded-lg border-blue-200 border-solid border-2 p-2"
+          className="flex-grow rounded-lg border-black-400 border-solid border-2 p-2"
           value={message}
           onChange={(e) => setMessage(e.target.value)}
         />

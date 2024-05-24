@@ -46,23 +46,54 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="flex flex-col">
-      <Header />
-      <div className="flex flex-row mt-20 gap-x-10">
-        {/* Actions */}
-        <div className="flex flex-col w-full">
-          <Assistant />
-          <Thread />
-          <Run />
+
+    <div className="flex flex-col h-screen">
+      <header className="bg-gray-900 text-white py-4 px-6 flex items-center justify-between">
+        <h1 className="text-2xl font-bold">Virtual Stock Analyst</h1>
+        <div className="flex space-x-4">
+        <Assistant />
+        <Thread />
+        <Run />
         </div>
-        {/* Chat */}
-        <div className="w-full">
+      </header>
+      <div className="flex-1 grid grid-cols-2 gap-6 p-6">
+        <div className="bg-white rounded-lg shadow-lg p-6">
+          <h2 className="text-3xl font-bold mb-4">Chat</h2>
           <ChatContainer />
         </div>
-        <div className="w-full">
+        <div className="bg-white rounded-lg shadow-lg p-6">
           <StockPricesContainer />
         </div>
       </div>
-    </main>
-  );
+      <Header />
+    </div>
+  )
 }
+
+
+
+//     <main className="flex flex-col">
+//       <div className="flex flex-row  gap-x-10 justify-stretch">
+//         <Assistant />
+//         <Thread />
+//         <Run />
+//       </div>
+     
+//       <div className="flex flex-row mt-20 gap-x-10">
+        
+//         <div className="bg-white rounded-lg shadow-lg p-6">
+//        
+//          </div>
+
+//         <div className="bg-white rounded-lg shadow-lg p-6">
+//         <StockPricesContainer />
+//           </div>
+        
+       
+//       </div>
+//       
+      
+
+//     </main>
+//   );
+// }
